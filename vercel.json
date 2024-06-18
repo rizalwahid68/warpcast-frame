@@ -8,6 +8,10 @@
     {
       "src": "park-2.png",
       "use": "@vercel/static"
+    },
+    {
+      "src": "park-3.png",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
