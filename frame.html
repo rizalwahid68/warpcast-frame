@@ -4,26 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="fc:frame" content="vNext">
-  <meta property="fc:frame:image" content="park-2.png">
+  <meta property="fc:frame:image" content="https://mad-testingframes.vercel.app/park-2.png">
   <meta property="fc:frame:button:1" content="Start">
-  <meta property="fc:frame:post_url" content="/api/basic">
+  <meta property="fc:frame:post_url" content="https://mad-testingframes.vercel.app/api/basic?id=2">
   <title>Simple Frame</title>
   <script>
     function start() {
-      const postUrl = document.querySelector('meta[property="fc:frame:post_url"]').getAttribute('content');
-      const xhr = new XMLHttpRequest();
-      xhr.open("POST", postUrl, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-          if (xhr.status === 200) {
-            document.getElementById('frameImage').src = 'park-3.png';
-          } else {
-            console.error("Failed to post data");
-          }
-        }
-      };
-      xhr.send(JSON.stringify({ action: "start" }));
+      document.getElementById('frameImage').src = 'park-3.png';
     }
   </script>
 </head>
