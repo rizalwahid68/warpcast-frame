@@ -5,38 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="fc:frame" content="vNext">
   <meta property="fc:frame:image" content="https://mad-testingframe.vercel.app/park-2.png">
-  <meta property="og:image" content="https://mad-testingframe.vercel.app/park-2.png">
-  <meta property="fc:frame:post_url" content="https://mad-testingframe.vercel.app/api/basic?id=1">
-  <meta property="fc:frame:button:1" content="Start">
-  <meta property="fc:frame:button:1:url" content="https://mad-testingframe.vercel.app/frame-2.html">
   <title>Simple Frame</title>
 </head>
 <body>
   <h1>Simple Warpcast Frame</h1>
-  <button id="startButton">Start</button>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var button = document.getElementById("startButton");
-      var buttonText = document.querySelector('meta[property="fc:frame:button:1"]').getAttribute("content");
-      var buttonUrl = document.querySelector('meta[property="fc:frame:button:1:url"]').getAttribute("content");
-      button.textContent = buttonText;
-      button.onclick = function() {
-        // Tambahkan pengecekan untuk memastikan URL ada sebelum mengarah ke sana
-        fetch(buttonUrl, { method: 'HEAD' })
-          .then(response => {
-            if (response.ok) {
-              window.location.href = buttonUrl;
-            } else {
-              alert('File not found: ' + buttonUrl);
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Error fetching the URL: ' + buttonUrl);
-          });
-      };
-    });
-  </script>
 </body>
 </html>
