@@ -22,7 +22,19 @@
       var buttonUrl = document.querySelector('meta[property="fc:frame:button:1:url"]').getAttribute("content");
       button.textContent = buttonText;
       button.onclick = function() {
-        window.location.href = buttonUrl;
+        // Tambahkan pengecekan untuk memastikan URL ada sebelum mengarah ke sana
+        fetch(buttonUrl, { method: 'HEAD' })
+          .then(response => {
+            if (response.ok) {
+              window.location.href = buttonUrl;
+            } else {
+              alert('File not found: ' + buttonUrl);
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('Error fetching the URL: ' + buttonUrl);
+          });
       };
     });
   </script>
