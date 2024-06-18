@@ -8,19 +8,6 @@
   ],
   "routes": [
     { "src": "/", "dest": "/frame.html" },
-    { "src": "/api/basic", "dest": "/basic.js" },
-    { "src": "/park-2.png", "dest": "/park-2.png" },
-    { "src": "/park-3.png", "dest": "/park-3.png" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*).png",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/png"
-        }
-      ]
-    }
+    { "src": "/api/basic", "dest": "/basic.js" }
   ]
 }
