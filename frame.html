@@ -11,22 +11,5 @@
 </head>
 <body>
   <h1>Mad Testing Frames</h1>
-  <button id="startButton">Start</button>
-
-  <script>
-    document.getElementById('startButton').addEventListener('click', function() {
-      const postUrl = document.querySelector('meta[property="fc:frame:post_url"]').content;
-      fetch(postUrl, {
-        method: 'POST'
-      })
-      .then(response => response.text())
-      .then(html => {
-        document.open();
-        document.write(html);
-        document.close();
-      })
-      .catch(error => console.error('Error:', error));
-    });
-  </script>
 </body>
 </html>
