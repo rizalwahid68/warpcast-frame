@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="fc:frame" content="vNext">
-  <meta property="fc:frame:image" content="park-2.png">
+  <meta property="fc:frame:image" content="https://mad-testingframes.vercel.app/park-2.png">
   <meta property="fc:frame:button:1" content="Start">
   <meta property="fc:frame:post_url" content="/api/basic">
   <title>Simple Frame</title>
@@ -17,7 +17,7 @@
       xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
-            document.getElementById('frameImage').src = 'park-3.png';
+            document.getElementById('frameImage').src = 'https://mad-testingframes.vercel.app/park-3.png';
           } else {
             console.error("Failed to post data");
           }
@@ -29,7 +29,7 @@
 </head>
 <body>
   <h1>Mad Testing Frames</h1>
-  <img id="frameImage" src="park-2.png" alt="Park Image" style="max-width: 100%;">
+  <img id="frameImage" src="https://mad-testingframes.vercel.app/park-2.png" alt="Park Image" style="max-width: 100%;">
   <button onclick="start()">Start</button>
 </body>
 </html>
