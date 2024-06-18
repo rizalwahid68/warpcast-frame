@@ -3,11 +3,9 @@
   "builds": [
     { "src": "frame.html", "use": "@vercel/static" },
     { "src": "park-2.png", "use": "@vercel/static" },
-    { "src": "park-3.png", "use": "@vercel/static" },
-    { "src": "basic.js", "use": "@vercel/node" }
+    { "src": "park-3.png", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/", "dest": "/frame.html" },
-    { "src": "/api/basic", "dest": "/basic.js" }
+    { "src": "/", "dest": "/frame.html" }
   ]
 }
