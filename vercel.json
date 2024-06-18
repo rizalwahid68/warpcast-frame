@@ -6,15 +6,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "frame-2.html",
-      "use": "@vercel/static"
-    },
-    {
       "src": "park-2.png",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "park-3.png",
       "use": "@vercel/static"
     }
   ],
