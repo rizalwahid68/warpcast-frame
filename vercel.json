@@ -2,19 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "frame.html",
-      "use": "@vercel/static"
+      "src": "server.js",
+      "use": "@vercel/node"
     },
     {
-      "src": "park-2.png",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "park-3.png",
+      "src": "public/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/", "dest": "/frame.html" }
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/park-3.png", "methods": ["POST"], "dest": "/server.js" }
   ]
 }
