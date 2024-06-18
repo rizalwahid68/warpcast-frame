@@ -2,10 +2,12 @@
   "version": 2,
   "builds": [
     { "src": "frame.html", "use": "@vercel/static" },
-    { "src": "park-2.png", "use": "@vercel/static" },
-    { "src": "park-3.png", "use": "@vercel/static" }
+    { "src": "public/park-2.png", "use": "@vercel/static" },
+    { "src": "public/park-3.png", "use": "@vercel/static" },
+    { "src": "api/basic.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/", "dest": "/frame.html" }
+    { "src": "/", "dest": "/frame.html" },
+    { "src": "/api/basic", "dest": "/api/basic.js" }
   ]
 }
