@@ -10,7 +10,20 @@
   <title>Simple Frame</title>
   <script>
     function start() {
-      document.getElementById('frameImage').src = 'park-3.png';
+      const postUrl = document.querySelector('meta[property="fc:frame:post_url"]').getAttribute('content');
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", postUrl, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            document.getElementById('frameImage').src = 'park-3.png';
+          } else {
+            console.error("Failed to post data");
+          }
+        }
+      };
+      xhr.send(JSON.stringify({ action: "start" }));
     }
   </script>
 </head>
