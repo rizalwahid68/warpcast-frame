@@ -4,6 +4,10 @@
     {
       "src": "frame.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "park-2.png",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
